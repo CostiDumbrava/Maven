@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-13T08:49:19 OESZ" name="Default suite" finished-at="2024-05-13T08:49:27 OESZ" duration-ms="8032">
+    <groups>
+    </groups>
+    <test started-at="2024-05-13T08:49:19 OESZ" name="Default test" finished-at="2024-05-13T08:49:27 OESZ" duration-ms="8032">
+      <class name="curs15.OpenBrowser">
+        <test-method signature="openBrowser()[pri:0, instance:curs15.OpenBrowser@71238fc2]" started-at="2024-05-13T08:49:19 OESZ" name="openBrowser" finished-at="2024-05-13T08:49:27 OESZ" duration-ms="7999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+      </class> <!-- curs15.OpenBrowser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
