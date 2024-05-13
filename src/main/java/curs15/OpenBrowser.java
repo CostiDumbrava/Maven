@@ -8,6 +8,10 @@ public class OpenBrowser {
 	
 	//add testNG library
 	//import testNG
+	
+	//cand adnotarea @Test este prezenta deasupra unei metode avem o referinta catre o 
+	//functionalitate - putem accesa in acest caz fara main 
+	
 	@Test
 	public void openBrowser() {
 		
