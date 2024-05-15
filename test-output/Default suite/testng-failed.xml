@@ -5,9 +5,12 @@
     <classes>
       <class name="curs17.SeleniumLocators">
         <methods>
+          <include name="xpathLocator"/>
           <include name="setup"/>
           <include name="idLocator"/>
           <include name="tearDown"/>
+          <include name="cssSelectorLocator"/>
+          <include name="nameLocator"/>
         </methods>
       </class> <!-- curs17.SeleniumLocators -->
     </classes>

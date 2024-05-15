@@ -26,7 +26,7 @@ public class SeleniumLocators extends BaseTest{
 	 * id     - copiez valoarea atributului id din DOM
 	 * name
 	 * css Selector - Selenium doar il foloseste, nu l controleaza 
-	 * Xpath  - Selenium doar il foloseste, nu l controleaza 
+	 * Xpath  - Selenium doar il foloseste, nu l controleaza \; este cel mai puternic locator dar nu e neaparat cel mai bun. Cel mai bun este locatorul specific in functie de ce nevoie am
 	 * 
 	 */
 	
@@ -87,13 +87,13 @@ public class SeleniumLocators extends BaseTest{
     }
     
     
-    //id ul ar trebui sa fie unic, probelema e ca poate fi si dublat(se genereaza automat si are un numar la final) sau lipseste id ul complet la un web element
+    //id ul ar trebui sa fie unic, ar fi locatorul ideal dar, problema e ca poate fi si dublat(se genereaza automat si are un numar la final) sau lipseste id ul complet la un web element
 	
     
-    @Test(priority=5)
+    @Test(priority=5) //de verificat eroarea!!!!!!!!!!!!!!
     public void idLocator() {
     	
-    	WebElement revieTab = browser.findElement(By.id("tab-title-reviews"));
+    	WebElement revieTab = browser.findElement(By.id("comment-reply-title"));
     	
     	WebElement commentBox = browser.findElement(By.id("comment"));
     	
@@ -104,9 +104,40 @@ public class SeleniumLocators extends BaseTest{
     	 * isDisplayed() --> verifica daca un element este vizibil
     	 * isEnabled() --> verifica daca un element este enabled 
     	 * isSelected() --> doar pentru checkbox sau radio button
+    	 * 
     	 */
     	
     }
     
+    @Test(priority=6) 
+    public void nameLocator() throws InterruptedException {
+    	
+    	WebElement commentBox = browser.findElement(By.name("comment"));
+    	commentBox.sendKeys("My super message");
+    	Thread.sleep(3000);
+    	commentBox.clear();//elimina textul dintr un element care primeste input
+    	Thread.sleep(3000);
+    	commentBox.sendKeys("New message");
+    }
     
+    @Test(priority=7)
+    public void cssSelectorLocator() {
+    	
+    	//tag name [atribut]  asa se scrie css in forma cea mai  simpla 
+    	//input[name='author']
+    	//css este limitat sa citeasca elementele intre sageti ><, xpath-ul poate sa faca asta
+    	
+    	browser.findElement(By.cssSelector("input[name='author']")).sendKeys("Test");
+    	
+    	
+    }
+    
+    @Test(priority=8)
+    public void xpathLocator() {
+    	
+    	//asa se scrie in forma cea mai simpla   //input[@type='email']
+    	
+    	browser.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
+    	
+    }
 }
