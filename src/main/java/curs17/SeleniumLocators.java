@@ -41,7 +41,7 @@ public class SeleniumLocators extends BaseTest{
 	 * near()    -- are o raza, in apropierea lui
 	 * 
 	 */
-    @Test(priority=1) //nu trebuie sa avem niciodata o metoda @Test fara asser in ea!!!!! Este o metoda de test si trebuie sa verific daca rezultatul este la fel cu ce asteptam sa se intample
+    @Test(priority=1) //nu trebuie sa avem niciodata o metoda @Test fara assert in ea!!!!! Este o metoda de test si trebuie sa verific daca rezultatul este la fel cu ce asteptam sa se intample
 	public void tagnameLocator() {
     	//<em>Discover</em>    --text ul din pagina web Discover Your Next Book
     	//    textul dintre tag uri, dintre sageti, tagutile : em>  ... <em
@@ -80,9 +80,9 @@ public class SeleniumLocators extends BaseTest{
     	
     	WebElement price = browser.findElement(By.className("price"));
     	
-    	System.out.println(price.getText()); //$10.20 $9.99 apar ambele preturi
+    	System.out.println(price.getText()); //$10.20    $9.99    apar ambele preturi
     	
-    	assertTrue(price.getText().contains("9.99"));// este o validare booleana; putema folosi assertFalse daca voiam sa vedem ca nu contine
+    	assertTrue(price.getText().contains("9.99"));// este o validare booleana; putem folosi assertFalse daca dorim sa vedem ca nu contine
     	
     }
     
@@ -97,7 +97,7 @@ public class SeleniumLocators extends BaseTest{
     	
     	WebElement commentBox = browser.findElement(By.id("comment"));
     	
-    	assertTrue(commentBox.isDisplayed()); //verifica daca este vizibil nu daca exista in DOM
+    	assertTrue(commentBox.isDisplayed()); //verifica daca este vizibil, nu daca exista in DOM
     	
     	
     	/*
@@ -135,7 +135,7 @@ public class SeleniumLocators extends BaseTest{
     @Test(priority=8)
     public void xpathLocator() {
     	
-    	//asa se scrie in forma cea mai simpla   //input[@type='email']
+    	//asa se scrie xpath in forma cea mai simpla -->     //input[@type='email']
     	
     	browser.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
     	
