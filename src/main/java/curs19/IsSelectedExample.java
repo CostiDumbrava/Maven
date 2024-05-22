@@ -36,6 +36,8 @@ public class IsSelectedExample extends BaseTest{
 		System.out.println(checkbox.isSelected());//devine true
 		
 		
+		
+		
 	}
 
 }
