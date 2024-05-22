@@ -10,7 +10,7 @@ public class BaseTest {
 public WebDriver browser;
 	
 	@BeforeClass 
-	public void setup() {
+	public void setup() throws InterruptedException {
 		
 		browser = new ChromeDriver();
 		browser.manage().window().maximize();
