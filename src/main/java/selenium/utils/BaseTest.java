@@ -1,5 +1,7 @@
 package selenium.utils;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -14,6 +16,7 @@ public WebDriver browser;
 		
 		browser = new ChromeDriver();
 		browser.manage().window().maximize();
+		browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // se adauga in Base Test si nu in @Test pentru ca e o actiune generala
 		browser.get("https://keybooks.ro");
 		
 	}
